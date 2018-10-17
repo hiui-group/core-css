@@ -1,0 +1,22 @@
+{
+  "name": "@hi-ui/core-css",
+  "version": "0.9.1",
+  "description": "HIUI core styles, include common reset, helper classes and typography. i18n supported.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hiui",
+    "css",
+    "scss",
+    "sass",
+    "reset",
+    "typography"
+  ],
+  "author": "HIUI <mi-hiui@xiaomi.com>",
+  "license": "MIT"
+}
