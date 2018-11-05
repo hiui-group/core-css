@@ -52,3 +52,16 @@
   text-indent: 100%;
   white-space: nowrap;
 }
+
+// Component reset
+@mixin component-reset() {
+  font-size: $font-size-normal;
+  line-height: $line-height-default;
+  text-align: left;
+  ul,
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
