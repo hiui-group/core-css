@@ -19,16 +19,26 @@ $palette-secondary: (
   'warning': #3da8f5
 );
 $palette-tertiary: (
+  'gray-darker': #ccc,
+  'gray-dark': #d8d8d8,
   'gray': #e7e7e7,
   'gray-light': #f6f6f6,
   'white': #fff
 );
 
+// Color palettes
 $palette-hiui: get-palette(get-color($palette-primary, 'hiui-blue'));
 $palette-orange: get-palette(get-color($palette-primary, 'orange'));
 $palette-cyan: get-palette(get-color($palette-primary, 'cyan'));
 $palette-blue: get-palette(get-color($palette-primary, 'blue'));
 $palette-purple: get-palette(get-color($palette-primary, 'purple'));
+
+// Color shortcuts
+$gray-darker: get-color($palette-tertiary, 'gray-darker');
+$gray-dark: get-color($palette-tertiary, 'gray-dark');
+$gray: get-color($palette-tertiary, 'gray');
+$gray-light: get-color($palette-tertiary, 'gray-light');
+$white: get-color($palette-tertiary, 'white');
 
 // Examples
 //.HIB-50 {color: get-color($palette-hiui, '50');}
