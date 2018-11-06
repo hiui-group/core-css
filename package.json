@@ -2,7 +2,7 @@
   "name": "@hi-ui/core-css",
   "version": "0.9.2",
   "description": "HIUI core styles, include common reset, helper classes and typography. i18n supported.",
-  "main": "index.js",
+  "main": "lib/index.scss",
   "directories": {
     "lib": "lib"
   },

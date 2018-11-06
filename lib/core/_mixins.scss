@@ -27,6 +27,8 @@
     '70': mix(#000, $color, 20%),
     '80': mix(#000, $color, 30%),
     '90': mix(#000, $color, 40%),
+    'g50': mix(mix(#000, $color, 90%), #fff, 15%),
+    'g60': mix(mix(#000, $color, 90%), #fff, 20%),
     'g70': mix(mix(#000, $color, 90%), #fff, 26%),
     'g80': mix(mix(#000, $color, 90%), #fff, 35%),
     'g90': mix(mix(#000, $color, 90%), #fff, 50%),
@@ -54,14 +56,57 @@
 }
 
 // Component reset
+// included in minimal components
 @mixin component-reset() {
-  font-size: $font-size-normal;
-  line-height: $line-height-default;
+  font: normal #{$font-size-normal}/#{$line-height-default} $font-family-base;
   text-align: left;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
+  word-spacing: normal;
+  white-space: normal;
+  color: $black;
   ul,
   ol {
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
+  a {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
+
+//// Component Example
+////
+//// Define component colors
+//@mixin hi-card-style($color: get-color($palette-primary, 'brand')) {
+//  .hi-card {
+//    border-color: map-get(get-palette($color), '50');
+//    background-color: map-get(get-palette($color), '10');
+//    color: map-get(get-palette($color), '50');
+//    &__title {
+//      color: map-get(get-palette($color), '80');
+//    }
+//  }
+//}
+//
+//// Component base style
+//.hi-card {
+//  display: inline-block;
+//  border: 1px solid;
+//  @include component-reset();
+//  &__title {
+//    text-align: center;
+//  }
+//}
+//
+//// Component colors
+//@include hi-card-style();
+//@each $name, $color in $theme-colors {
+//  .theme__#{$name} {
+//    @include hi-card-style($color);
+//  }
+//}

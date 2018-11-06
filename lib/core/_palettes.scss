@@ -5,21 +5,26 @@
  */
 
 // Colors
-$palette-primary: (
-  'hiui-blue': #4285f4,
+$theme-colors: (
   'orange': #f63,
   'cyan': #46bc99,
   'blue': #3da8f5,
   'purple': #8a8acb,
   'green': #1da653
 );
+
+$palette-primary: map-merge(
+  ('hiui-blue': #4285f4),
+  $theme-colors
+);
+
 $palette-secondary: (
   'success': #f63,
   'danger': #46bc99,
   'warning': #3da8f5
 );
 $palette-tertiary: (
-  'gray-darker': #ccc,
+  'black': #333,
   'gray-dark': #d8d8d8,
   'gray': #e7e7e7,
   'gray-light': #f6f6f6,
@@ -34,7 +39,7 @@ $palette-blue: get-palette(get-color($palette-primary, 'blue'));
 $palette-purple: get-palette(get-color($palette-primary, 'purple'));
 
 // Color shortcuts
-$gray-darker: get-color($palette-tertiary, 'gray-darker');
+$black: get-color($palette-tertiary, 'black');
 $gray-dark: get-color($palette-tertiary, 'gray-dark');
 $gray: get-color($palette-tertiary, 'gray');
 $gray-light: get-color($palette-tertiary, 'gray-light');
@@ -52,3 +57,5 @@ $white: get-color($palette-tertiary, 'white');
 //.HIBG-90 {color: get-color($palette-hiui, 'g90');}
 //.HIBG-80 {color: get-color($palette-hiui, 'g80');}
 //.HIBG-70 {color: get-color($palette-hiui, 'g70');}
+//.HIBG-60 {color: get-color($palette-hiui, 'g60');}
+//.HIBG-50 {color: get-color($palette-hiui, 'g50');}
