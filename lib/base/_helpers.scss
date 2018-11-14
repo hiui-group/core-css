@@ -4,8 +4,6 @@
  * Description: helper classes.
  */
 
-@import '../core/index';
-
 .clearfix {
   @include clearfix();
 }
