@@ -4,4 +4,10 @@
  * Description: index.
  */
 
+@import './i18n/zh-CN';
+
 @import './core/index';
+
+@import './base/base';
+@import './base/helpers';
+@import './base/typography';
