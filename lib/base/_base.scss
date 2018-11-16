@@ -15,9 +15,7 @@ body {
 }
 
 a {
-  &:link {
-    color: get-color($palette-hiui, '50');
-  }
+  color: get-color($palette-hiui, '50');
   &:visited {
     color: get-color($palette-hiui, '40');
   }
