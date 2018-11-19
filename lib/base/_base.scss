@@ -3,7 +3,7 @@
  * Date: 2018-08-16 00:00
  * Description: Base style index.
  */
-@import '../core/index';
+
 @import 'normalize';
 
 // Main
@@ -15,12 +15,7 @@ body {
 }
 
 a {
-  &:link {
-    color: get-color($palette-hiui, '50');
-  }
-  &:visited {
-    color: get-color($palette-hiui, '40');
-  }
+  color: get-color($palette-hiui, '50');
   &:focus {
     color: get-color($palette-hiui, '80');
   }
