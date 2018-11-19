@@ -16,9 +16,6 @@ body {
 
 a {
   color: get-color($palette-hiui, '50');
-  &:visited {
-    color: get-color($palette-hiui, '40');
-  }
   &:focus {
     color: get-color($palette-hiui, '80');
   }
