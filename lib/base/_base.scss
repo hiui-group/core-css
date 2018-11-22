@@ -8,7 +8,7 @@
 
 // Main
 body {
-  min-width: $minPageWidth;
+  min-width: $min-page-width;
   font: #{$font-size-normal}/#{$line-height-default} $font-family-base;
   background-color: $white;
   color: $black;
@@ -16,12 +16,15 @@ body {
 
 a {
   color: get-color($palette-hiui, '50');
+
   &:focus {
     color: get-color($palette-hiui, '80');
   }
+
   &:hover {
     color: get-color($palette-hiui, '80');
   }
+
   &:active {
     color: get-color($palette-hiui, '40');
   }

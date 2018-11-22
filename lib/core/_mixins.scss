@@ -32,7 +32,7 @@
     'g70': mix(mix(#000, $color, 90%), #fff, 26%),
     'g80': mix(mix(#000, $color, 90%), #fff, 35%),
     'g90': mix(mix(#000, $color, 90%), #fff, 50%),
-    'g100': mix(mix(#000, $color, 90%), #fff, 80%),
+    'g100': mix(mix(#000, $color, 90%), #fff, 80%)
   );
 }
 
@@ -43,6 +43,7 @@
     content: '';
     display: table;
   }
+
   &:after {
     clear: both;
   }
@@ -67,12 +68,14 @@
   word-spacing: normal;
   white-space: normal;
   color: $black;
+
   ul,
   ol {
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
+
   a {
     padding-left: 0;
     padding-right: 0;
@@ -105,8 +108,8 @@
 //
 //// Component colors
 //@include hi-card-style();
-//@each $name, $color in $theme-colors {
-//  .theme__#{$name} {
-//    @include hi-card-style($color);
+//@each $key, $value in $theme-colors {
+//  .theme__#{$key} {
+//    @include hi-card-style($value);
 //  }
 //}

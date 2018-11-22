@@ -10,6 +10,7 @@
   ul,
   ol {
     padding-left: 2em;
+
     ul,
     ol {
       margin-top: $spacer-1;
@@ -31,9 +32,11 @@
 
   li {
     word-wrap: break-all;
+
     > p {
       margin-top: 0;
     }
+
     & + li {
       margin-top: $spacer-1;
     }
@@ -42,12 +45,14 @@
   dl {
     padding: 0;
   }
+
   dt {
     padding: 0;
     margin-top: $spacer-4;
     font-style: italic;
     font-weight: $font-weight-bold;
   }
+
   dd {
     margin-left: 0;
     margin-bottom: $spacer-4;
