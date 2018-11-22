@@ -86,10 +86,11 @@
 ////
 //// Define component colors
 //@mixin hi-card-style($color: get-color($palette-primary, 'hiui-blue')) {
-//  .hi-card {
+//  & {
 //    border-color: map-get(get-palette($color), '50');
 //    background-color: map-get(get-palette($color), '10');
 //    color: map-get(get-palette($color), '50');
+//
 //    &__title {
 //      color: map-get(get-palette($color), '80');
 //    }
@@ -101,15 +102,16 @@
 //  display: inline-block;
 //  border: 1px solid;
 //  @include component-reset();
+//
+//  // Component colors
+//  @include hi-card-style();
 //  &__title {
 //    text-align: center;
 //  }
 //}
 //
-//// Component colors
-//@include hi-card-style();
 //@each $key, $value in $theme-colors {
-//  .theme__#{$key} {
+//  .theme__#{$key} .hi-card {
 //    @include hi-card-style($value);
 //  }
 //}
