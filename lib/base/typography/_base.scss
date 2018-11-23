@@ -63,9 +63,15 @@ small {
     margin-bottom: 0 !important;
   }
 
+  // Be careful about CSS selector specificity!
+  // For example:
+  // article a < .hi-btn
+  // .entry a > .hi-btn
   a {
-    padding-left: 0.125em;
-    padding-right: 0.125em;
+    //&:not(.hi-btn) {
+    //  padding-left: 0.125em;
+    //  padding-right: 0.125em;
+    //}
 
     // Fix for anchors like <a name="examples">.
     &:not([href]) {
@@ -91,7 +97,7 @@ small {
     height: 1px;
     padding: 0;
     margin: $spacer-6 0;
-    background-color: #ccc;
+    background-color: $gray-dark;
     border: 0;
   }
 
@@ -99,9 +105,9 @@ small {
     margin-left: 0;
     margin-right: 0;
     padding: $spacer-2 $spacer-4;
-    background-color: #f8f8f8;
+    background-color: $gray-light;
     color: #666;
-    border-left: $spacer-1 solid #dfe2e5;
+    border-left: $spacer-1 solid $gray-dark;
 
     > :first-child {
       margin-top: 0;
