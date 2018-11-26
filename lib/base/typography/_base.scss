@@ -97,7 +97,7 @@ small {
     height: 1px;
     padding: 0;
     margin: $spacer-6 0;
-    background-color: $gray-dark;
+    background-color: $gray-light;
     border: 0;
   }
 
@@ -105,9 +105,9 @@ small {
     margin-left: 0;
     margin-right: 0;
     padding: $spacer-2 $spacer-4;
-    background-color: $gray-light;
+    background-color: $gray-lighter;
     color: #666;
-    border-left: $spacer-1 solid $gray-dark;
+    border-left: $spacer-1 solid $gray;
 
     > :first-child {
       margin-top: 0;
