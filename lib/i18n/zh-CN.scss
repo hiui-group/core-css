@@ -3,13 +3,14 @@
  * Date: 2018-08-16 00:00
  * Description: i18n config
  */
+/* stylelint-disable */
 
 @import '../core/index';
 
 // 增加中文字体族
-$_chs-sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$_chs-serif-font-stack: Georgia, 'Times New Roman', Times, 'Songti SC', STSong, SimSun, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$_mono-font-stack: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$_chs-sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$_chs-serif-font-stack: Georgia, 'Times New Roman', Times, 'Songti SC', STSong, SimSun, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$_mono-font-stack: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
 
 $font-family-base: $_chs-sans-font-stack;
 $font-family-alt: $_chs-serif-font-stack;
