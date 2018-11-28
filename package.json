@@ -1,13 +1,13 @@
 {
   "name": "@hi-ui/core-css",
-  "version": "1.0.0-beta.9",
+  "version": "1.0.0-beta.10",
   "description": "HIUI core styles, include common reset, helper classes and typography. i18n supported.",
   "main": "index.scss",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "node_modules/.bin/stylelint --config .stylelintrc.js 'lib/**/*.scss'"
+    "test": "node_modules/.bin/stylelint --config .stylelintrc 'lib/**/*.scss'"
   },
   "repository": {
     "type": "git",
