@@ -11,39 +11,44 @@ $theme-colors: (
   'blue': #3da8f5,
   'purple': #8a8acb,
   'green': #1da653
-);
+) !default;
 
 $palette-primary: map-merge(
   ('hiui-blue': #4285f4),
   $theme-colors
-);
+) !default;
 
 $palette-secondary: (
-  'success': #f63,
-  'danger': #46bc99,
-  'warning': #3da8f5
-);
+  'success': #1da653,
+  'danger': #eb5252,
+  'warning': #e19d0c
+) !default;
+
 $palette-tertiary: (
   'black': #333,
-  'gray-dark': #d8d8d8,
-  'gray': #e7e7e7,
-  'gray-light': #f6f6f6,
+  'gray-darker': #666,
+  'gray-dark': #ccc,
+  'gray': #d8d8d8,
+  'gray-light': #e7e7e7,
+  'gray-lighter': #f6f6f6,
   'white': #fff
-);
+) !default;
 
 // Color palettes
-$palette-hiui: get-palette(get-color($palette-primary, 'hiui-blue'));
-$palette-orange: get-palette(get-color($palette-primary, 'orange'));
-$palette-cyan: get-palette(get-color($palette-primary, 'cyan'));
-$palette-blue: get-palette(get-color($palette-primary, 'blue'));
-$palette-purple: get-palette(get-color($palette-primary, 'purple'));
+$palette-hiui: get-palette(get-color($palette-primary, 'hiui-blue')) !default;
+$palette-orange: get-palette(get-color($palette-primary, 'orange')) !default;
+$palette-cyan: get-palette(get-color($palette-primary, 'cyan')) !default;
+$palette-blue: get-palette(get-color($palette-primary, 'blue')) !default;
+$palette-purple: get-palette(get-color($palette-primary, 'purple')) !default;
 
 // Color shortcuts
-$black: get-color($palette-tertiary, 'black');
-$gray-dark: get-color($palette-tertiary, 'gray-dark');
-$gray: get-color($palette-tertiary, 'gray');
-$gray-light: get-color($palette-tertiary, 'gray-light');
-$white: get-color($palette-tertiary, 'white');
+$black: get-color($palette-tertiary, 'black') !default;
+$gray-darker: get-color($palette-tertiary, 'gray-darker') !default;
+$gray-dark: get-color($palette-tertiary, 'gray-dark') !default;
+$gray: get-color($palette-tertiary, 'gray') !default;
+$gray-light: get-color($palette-tertiary, 'gray-light') !default;
+$gray-lighter: get-color($palette-tertiary, 'gray-lighter') !default;
+$white: get-color($palette-tertiary, 'white') !default;
 
 // Examples
 //.HIB-50 {color: get-color($palette-hiui, '50');}

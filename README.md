@@ -11,8 +11,8 @@ For component usage, just use `@import '@hi-ui/core-css';` imports variables and
 For theme usage, use code below to import variables, mix-ins, normalize, helper classes etc.
 
 ```scss
-@import '@hi-ui/core-css/i18n/zh-CN';
-@import '@hi-ui/core-css/base';
+@import '@hi-ui/core-css/i18n/zh-CN.scss';
+@import '@hi-ui/core-css/base.scss';
 ```
 
 -- EOF --

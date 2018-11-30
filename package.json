@@ -1,13 +1,13 @@
 {
   "name": "@hi-ui/core-css",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0",
   "description": "HIUI core styles, include common reset, helper classes and typography. i18n supported.",
-  "main": "lib/index.scss",
+  "main": "index.scss",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/stylelint --config .stylelintrc 'lib/**/*.scss'"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,12 @@
     "typography"
   ],
   "author": "HIUI <mi-hiui@xiaomi.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^9.9.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.4.0"
+  },
+  "dependencies": {}
 }

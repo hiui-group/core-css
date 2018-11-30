@@ -11,8 +11,8 @@ HIUI 模板核心样式文件，包含初始化、布局、排版等样式。
 主题依赖包含了核心文件以及必备的 normalize、helper classes、排版、多语言等支持，使用方法如下：
 
 ```scss
-@import '@hi-ui/core-css/i18n/zh-CN';
-@import '@hi-ui/core-css/base';
+@import '@hi-ui/core-css/i18n/zh-CN.scss';
+@import '@hi-ui/core-css/base.scss';
 ```
 
 -- EOF --

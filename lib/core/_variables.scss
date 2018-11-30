@@ -5,7 +5,7 @@
  */
 
 // Layouts
-$minPageWidth: 1260px !default;
+$min-page-width: 1260px !default;
 
 // Fonts
 /// Font Stacks
@@ -39,12 +39,9 @@ $font-weight-light: 300 !default;
 
 // Line Heights
 $line-height-normal: 1.5 !default;
-$line-height-default: $line-height-normal;
+$line-height-default: $line-height-normal !default;
 $line-height-condensed: 1.25 !default;
 $line-height-condensed-ultra: 1 !default;
-
-// Class Names
-$entry-selector: '.entry';
 
 // Layout
 $spacer: 4px !default;
@@ -75,7 +72,10 @@ $spacer-9: nth($spacers, 9) !default; // 36px
 $spacer-10: nth($spacers, 10) !default; // 40px
 
 // Animation
-$speed-fast: 0.15s;
-$speed-normal: 0.3s;
-$speed-slow: 0.5s;
-$easing: linear;
+$speed-fast: 0.15s !default;
+$speed-normal: 0.3s !default;
+$speed-slow: 0.5s !default;
+$easing: linear !default;
+
+// Entry selector
+$entry-selector: '.entry' !default;

@@ -32,18 +32,19 @@
     'g70': mix(mix(#000, $color, 90%), #fff, 26%),
     'g80': mix(mix(#000, $color, 90%), #fff, 35%),
     'g90': mix(mix(#000, $color, 90%), #fff, 50%),
-    'g100': mix(mix(#000, $color, 90%), #fff, 80%),
+    'g100': mix(mix(#000, $color, 90%), #fff, 80%)
   );
 }
 
 // Clear float
 @mixin clearfix() {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
@@ -67,12 +68,23 @@
   word-spacing: normal;
   white-space: normal;
   color: $black;
+
   ul,
   ol {
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
+
+  dl {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  li + li {
+    margin: 0;
+  }
+
   a {
     padding-left: 0;
     padding-right: 0;
@@ -83,10 +95,11 @@
 ////
 //// Define component colors
 //@mixin hi-card-style($color: get-color($palette-primary, 'hiui-blue')) {
-//  .hi-card {
+//  & {
 //    border-color: map-get(get-palette($color), '50');
 //    background-color: map-get(get-palette($color), '10');
 //    color: map-get(get-palette($color), '50');
+//
 //    &__title {
 //      color: map-get(get-palette($color), '80');
 //    }
@@ -98,15 +111,16 @@
 //  display: inline-block;
 //  border: 1px solid;
 //  @include component-reset();
+//
+//  // Component colors
+//  @include hi-card-style();
 //  &__title {
 //    text-align: center;
 //  }
 //}
 //
-//// Component colors
-//@include hi-card-style();
-//@each $name, $color in $theme-colors {
-//  .theme__#{$name} {
-//    @include hi-card-style($color);
+//@each $key, $value in $theme-colors {
+//  .theme__#{$key} .hi-card {
+//    @include hi-card-style($value);
 //  }
 //}
