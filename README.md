@@ -1,5 +1,9 @@
 # HIUI Core CSS
 
+<p align="center">
+  <a href="https://circleci.com/gh/hiui-group/core-css"><img src="https://circleci.com/gh/hiui-group/core-css.svg?style=shield" alt="CircleCI" /></a>
+</p>
+
 HIUI core styles, include common reset, helper classes and typography. i18n supported.
 
 ## Usage
