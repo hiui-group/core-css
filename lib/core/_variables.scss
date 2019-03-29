@@ -39,23 +39,22 @@ $font-weight-light: 300 !default;
 
 // Line Heights
 $line-height-normal: 1.5 !default;
-$line-height-default: $line-height-normal !default;
 $line-height-condensed: 1.25 !default;
 $line-height-condensed-ultra: 1 !default;
 
 // Layout
 $spacer: 4px !default;
 $spacers: (
-  $spacer, // => 4px
-  $spacer * 2, // => 8px
-  $spacer * 3, // => 12px
-  $spacer * 4, // => 16px
-  $spacer * 5, // => 20px
-  $spacer * 6, // => 24px
-  $spacer * 7, // => 28px
-  $spacer * 8, // => 32px
-  $spacer * 9, // => 36px
-  $spacer * 10, // => 40px
+  $spacer,
+  $spacer * 2,
+  $spacer * 3,
+  $spacer * 4,
+  $spacer * 5,
+  $spacer * 6,
+  $spacer * 7,
+  $spacer * 8,
+  $spacer * 9,
+  $spacer * 10,
 ) !default;
 
 // Aliases for easy use
@@ -75,7 +74,10 @@ $spacer-10: nth($spacers, 10) !default; // 40px
 $speed-fast: 0.15s !default;
 $speed-normal: 0.3s !default;
 $speed-slow: 0.5s !default;
-$easing: linear !default;
+$timing-fn: linear !default;
+//$ease-in-fn: ease-in !default;
+//$ease-out-fn: ease-in !default;
+$easing: $timing-fn !default;
 
 // Entry selector
 $entry-selector: '.entry' !default;
