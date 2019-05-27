@@ -15,7 +15,8 @@
 }
 
 // Get Palette
-// generate hiui design palette
+// generate hiui design palette based on given color
+// $color：base name
 @function get-palette($color) {
   @return (
     '10': mix(#fff, $color, 50%),

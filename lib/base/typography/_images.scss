@@ -7,7 +7,8 @@
 @import '../../core/index';
 
 #{$entry-selector} {
-  img {
+  > img,
+  > figure img {
     max-width: 100%;
     box-sizing: content-box;
     background-color: transparent;
