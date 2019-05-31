@@ -16,17 +16,21 @@
       margin-top: $spacer-1;
       margin-bottom: $spacer-1;
     }
+  }
 
-    li {
-      word-wrap: break-all;
+  li {
+    word-wrap: break-all;
 
-      > p {
-        margin-top: 0;
-      }
+    > *:first-child {
+      margin-top: 0 !important;
+    }
 
-      & + li {
-        margin-top: $spacer-1;
-      }
+    > *:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    & + li {
+      margin-top: $spacer-1;
     }
   }
 

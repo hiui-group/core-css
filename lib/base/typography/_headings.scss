@@ -7,6 +7,7 @@
 @import '../../core/index';
 
 #{$entry-selector} {
+  // Reset all headings at entry root
   > {
     h1,
     h2,
@@ -16,6 +17,7 @@
     h6 {
       margin-top: $spacer-6;
       margin-bottom: $spacer-4;
+      font-weight: $font-weight-bold;
     }
 
     h1 {
