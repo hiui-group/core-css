@@ -60,7 +60,7 @@
 // Component reset
 // included in minimal components
 @mixin component-reset() {
-  font: normal #{$font-size-normal}/#{$line-height-default} $font-family-base;
+  font: normal #{$font-size-normal}/#{$line-height-normal} $font-family-base;
   text-align: left;
   text-indent: 0;
   text-shadow: none;

@@ -8,6 +8,11 @@
 > 1. 修订号：当你做了向下兼容的问题修正。
 > 先行版本号及版本编译信息可以加到“主版本号.次版本号.修订号”的后面，作为延伸。
 
+## 2.0.0
+
+- 修改所有位于 `$entry-selector` 块级元素为子选择器；
+- 修改 `line-height-default` 为 `line-height-normal`，与 `font-size-normal` 统一。
+
 ## 1.0.0
 
 - 增加 style-lint 检查；
