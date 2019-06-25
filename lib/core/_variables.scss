@@ -9,27 +9,15 @@ $min-page-width: 1260px !default;
 
 // Fonts
 /// Font Stacks
-$_symbol-font-stack: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$_sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif, $_symbol-font-stack !default;
-$_serif-font-stack: Georgia, 'Times New Roman', Times, serif, $_symbol-font-stack !default;
+$_sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$_serif-font-stack: Georgia, 'Times New Roman', Times, serif !default;
 $_mono-font-stack: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
-/// Font Families
-$font-family-base: $_sans-font-stack !default;
-$font-family-alt: $_serif-font-stack !default;
-$font-family-mono: $_mono-font-stack !default;
+$_symbol-font-stack: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 
-// Font Sizes
-$font-size-x-large: 18px !default;
-$font-size-large: 16px !default;
-$font-size-normal: 14px !default;
-$font-size-small: 12px !default;
-$font-size-x-small: 11px !default;
-$font-size-h1: 28px !default;
-$font-size-h2: 24px !default;
-$font-size-h3: 20px !default;
-$font-size-h4: 16px !default;
-$font-size-h5: 14px !default;
-$font-size-h6: 12px !default;
+/// Font Families
+$font-family-base: $_sans-font-stack, $_symbol-font-stack !default;
+$font-family-alt: $_serif-font-stack, $_symbol-font-stack !default;
+$font-family-mono: $_mono-font-stack !default;
 
 // Font Weights
 $font-weight-bold: 600 !default;
@@ -37,25 +25,49 @@ $font-weight-semibold: 500 !default;
 $font-weight-normal: 400 !default;
 $font-weight-light: 300 !default;
 
+// Font Sizes
+$font-size-x-large: 18px !default;
+$font-size-large: 16px !default;
+$font-size-normal: 14px !default;
+$font-size-small: 12px !default;
+$font-size-x-small: 11px !default;
+$font-size-h1: 32px !default;
+$font-size-h2: 24px !default;
+$font-size-h3: 20px !default;
+$font-size-h4: 16px !default;
+$font-size-h5: 14px !default;
+$font-size-h6: 12px !default;
+
 // Line Heights
+$line-height-size-x-large: 26px !default;
+$line-height-size-large: 24px !default;
+$line-height-size-normal: 22px !default;
+$line-height-size-small: 20px !default;
+$line-height-size-x-small: 18px !default;
+$line-height-size-h1: 40px !default;
+$line-height-size-h2: 32px !default;
+$line-height-size-h3: 28px !default;
+$line-height-size-h4: 24px !default;
+$line-height-size-h5: 22px !default;
+$line-height-size-h6: 20px !default;
+
 $line-height-normal: 1.5 !default;
-$line-height-default: $line-height-normal !default;
 $line-height-condensed: 1.25 !default;
 $line-height-condensed-ultra: 1 !default;
 
 // Layout
 $spacer: 4px !default;
 $spacers: (
-  $spacer, // => 4px
-  $spacer * 2, // => 8px
-  $spacer * 3, // => 12px
-  $spacer * 4, // => 16px
-  $spacer * 5, // => 20px
-  $spacer * 6, // => 24px
-  $spacer * 7, // => 28px
-  $spacer * 8, // => 32px
-  $spacer * 9, // => 36px
-  $spacer * 10, // => 40px
+  $spacer,
+  $spacer * 2,
+  $spacer * 3,
+  $spacer * 4,
+  $spacer * 5,
+  $spacer * 6,
+  $spacer * 7,
+  $spacer * 8,
+  $spacer * 9,
+  $spacer * 10,
 ) !default;
 
 // Aliases for easy use
@@ -75,7 +87,10 @@ $spacer-10: nth($spacers, 10) !default; // 40px
 $speed-fast: 0.15s !default;
 $speed-normal: 0.3s !default;
 $speed-slow: 0.5s !default;
-$easing: linear !default;
+$timing-fn: linear !default;
+//$ease-in-fn: ease-in !default;
+//$ease-out-fn: ease-in !default;
+$easing: $timing-fn !default;
 
 // Entry selector
 $entry-selector: '.entry' !default;

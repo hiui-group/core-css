@@ -15,7 +15,8 @@
 }
 
 // Get Palette
-// generate hiui design palette
+// generate hiui design palette based on given color
+// $color：base name
 @function get-palette($color) {
   @return (
     '10': mix(#fff, $color, 50%),
@@ -69,25 +70,53 @@
   white-space: normal;
   color: $black;
 
+  // Reset elements
+  /// Base & Headings
+  a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  p,
+  blockquote,
+  ul,
+  ol,
+  dl,
+  table,
+  pre,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // Lists
   ul,
   ol {
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    ul,
+    ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    & + li {
+      margin-top: 0;
+    }
   }
 
   dl {
     margin-top: 0;
     margin-bottom: 0;
-  }
-
-  li + li {
-    margin: 0;
-  }
-
-  a {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
 

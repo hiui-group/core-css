@@ -7,55 +7,62 @@
 @import '../../core/index';
 
 #{$entry-selector} {
-  ul,
-  ol {
-    padding-left: 2em;
-
+  // Only add to lists at entry root
+  > {
     ul,
     ol {
-      margin-top: $spacer-1;
-      margin-bottom: $spacer-1;
+      padding-left: 2em;
+
+      ul,
+      ol {
+        margin-top: $spacer-1;
+        margin-bottom: $spacer-1;
+      }
+
+      li {
+        word-wrap: break-all;
+
+        > *:first-child {
+          margin-top: 0 !important;
+        }
+
+        > *:last-child {
+          margin-bottom: 0 !important;
+        }
+
+        & + li {
+          margin-top: $spacer-1;
+        }
+      }
     }
-  }
 
-  ol ol,
-  ul ol {
-    list-style-type: lower-roman;
-  }
-
-  ul ul ol,
-  ul ol ol,
-  ol ul ol,
-  ol ol ol {
-    list-style-type: lower-alpha;
-  }
-
-  li {
-    word-wrap: break-all;
-
-    > p {
-      margin-top: 0;
+    ol ol,
+    ul ol {
+      list-style-type: lower-roman;
     }
 
-    & + li {
-      margin-top: $spacer-1;
+    ul ul ol,
+    ul ol ol,
+    ol ul ol,
+    ol ol ol {
+      list-style-type: lower-alpha;
     }
-  }
 
-  dl {
-    padding: 0;
-  }
+    dl {
+      padding: 0;
 
-  dt {
-    padding: 0;
-    margin-top: $spacer-4;
-    font-style: italic;
-    font-weight: $font-weight-bold;
-  }
+      dt {
+        padding: 0;
+        margin-top: $spacer-4;
+        font-style: italic;
+        font-weight: $font-weight-bold;
+      }
 
-  dd {
-    margin-left: 0;
-    margin-bottom: $spacer-4;
-    padding: 0 $spacer-4;
+      dd {
+        margin-left: 0;
+        margin-bottom: $spacer-4;
+        padding: 0 $spacer-4;
+      }
+    }
   }
 }

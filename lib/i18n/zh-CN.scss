@@ -8,39 +8,30 @@
 @import '../core/index';
 
 // 增加中文字体族
-$_chs-sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$_chs-serif-font-stack: Georgia, 'Times New Roman', Times, 'Songti SC', STSong, SimSun, serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$_chs-sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif !default;
+$_chs-serif-font-stack: Georgia, 'Times New Roman', Times, 'Songti SC', STSong, SimSun, serif !default;
 $_mono-font-stack: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
 
-$font-family-base: $_chs-sans-font-stack;
-$font-family-alt: $_chs-serif-font-stack;
+$font-family-base: $_chs-sans-font-stack, $_symbol-font-stack;
+$font-family-alt: $_chs-serif-font-stack, $_symbol-font-stack;
 
 #{$entry-selector}:lang(zh) {
-  // Headline
-  // 中文不加粗
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: $font-weight-normal;
-  }
-
-  // Lists
-  // 设置一级列表为中文序号
-  ol {
-    list-style-type: cjk-ideographic;
-  }
-
-  li {
-    ol {
-      list-style-type: decimal;
+  > {
+    // 标题中文不加粗
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: $font-weight-normal;
     }
-  }
 
-  // 中文不使用斜体
-  dt {
-    font-style: normal;
+    // 中文不使用斜体
+    dl {
+      dt {
+        font-style: normal;
+      }
+    }
   }
 }
