@@ -6,33 +6,13 @@
 
 @import '../../core/index';
 
-// Headings
-//h1,
-//h2,
-//h3,
-//h4,
-//h5,
-//h6 {
-//  margin-top: 0;
-//  margin-bottom: 0;
-//  font-weight: $font-weight-bold;
-//}
-
 #{$entry-selector} {
   @include clearfix();
 
-  > *:first-child {
-    margin-top: 0 !important;
-  }
-
-  > *:last-child {
-    margin-bottom: 0 !important;
-  }
-
   // Be careful about CSS selector specificity!
-  // For example:
-  // article a < .hi-btn
-  // .entry a > .hi-btn
+  /// For example:
+  /// article a < .hi-btn
+  /// .entry a > .hi-btn
   a {
     //&:not(.hi-btn) {
     //  padding-left: 0.125em;
@@ -47,50 +27,61 @@
   }
 
   // Perfect small
-  // 12px * 0.875 => 11px
-  // 14px * 0.875 => 12px
-  // 16px * 0.875 => 14px
-  // 18px * 0.875 => 16px
-  // 20px * 0.875 => 18px
+  /// 12px * 0.875 => 11px
+  /// 14px * 0.875 => 12px
+  /// 16px * 0.875 => 14px
+  /// 18px * 0.875 => 16px
+  /// 20px * 0.875 => 18px
   small {
     font-size: 0.875em;
   }
 
-  // Blocks margin
-  p,
-  blockquote,
-  ul,
-  ol,
-  dl,
-  table,
-  pre {
-    margin-top: $spacer-4;
-    margin-bottom: $spacer-4;
-  }
-
-  // Horizontal rules
-  hr {
-    height: 1px;
-    padding: 0;
-    margin: $spacer-6 0;
-    background-color: $gray-light;
-    border: 0;
-  }
-
-  blockquote {
-    margin-left: 0;
-    margin-right: 0;
-    padding: $spacer-2 $spacer-4;
-    background-color: $gray-lighter;
-    color: #666;
-    border-left: $spacer-1 solid $gray;
-
-    > :first-child {
-      margin-top: 0;
+  // Only add to block elements at entry root
+  > {
+    // Blocks margin
+    *:first-child {
+      margin-top: 0 !important;
     }
 
-    > :last-child {
-      margin-bottom: 0;
+    *:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    p,
+    blockquote,
+    ul,
+    ol,
+    dl,
+    table,
+    pre {
+      margin-top: $spacer-4;
+      margin-bottom: $spacer-4;
+    }
+
+    // Horizontal rules
+    hr {
+      height: 1px;
+      padding: 0;
+      margin: $spacer-6 0;
+      background-color: $gray-light;
+      border: 0;
+    }
+
+    blockquote {
+      margin-left: 0;
+      margin-right: 0;
+      padding: $spacer-2 $spacer-4;
+      background-color: $gray-lighter;
+      color: #666;
+      border-left: $spacer-1 solid $gray;
+
+      > :first-child {
+        margin-top: 0;
+      }
+
+      > :last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -9,13 +9,14 @@ $min-page-width: 1260px !default;
 
 // Fonts
 /// Font Stacks
-$_symbol-font-stack: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
-$_sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif, $_symbol-font-stack !default;
-$_serif-font-stack: Georgia, 'Times New Roman', Times, serif, $_symbol-font-stack !default;
+$_sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$_serif-font-stack: Georgia, 'Times New Roman', Times, serif !default;
 $_mono-font-stack: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
+$_symbol-font-stack: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+
 /// Font Families
-$font-family-base: $_sans-font-stack !default;
-$font-family-alt: $_serif-font-stack !default;
+$font-family-base: $_sans-font-stack, $_symbol-font-stack !default;
+$font-family-alt: $_serif-font-stack, $_symbol-font-stack !default;
 $font-family-mono: $_mono-font-stack !default;
 
 // Font Weights
@@ -30,7 +31,7 @@ $font-size-large: 16px !default;
 $font-size-normal: 14px !default;
 $font-size-small: 12px !default;
 $font-size-x-small: 11px !default;
-$font-size-h1: 30px !default;
+$font-size-h1: 32px !default;
 $font-size-h2: 24px !default;
 $font-size-h3: 20px !default;
 $font-size-h4: 16px !default;
@@ -43,8 +44,7 @@ $line-height-size-large: 24px !default;
 $line-height-size-normal: 22px !default;
 $line-height-size-small: 20px !default;
 $line-height-size-x-small: 18px !default;
-
-$line-height-size-h1: 38px !default;
+$line-height-size-h1: 40px !default;
 $line-height-size-h2: 32px !default;
 $line-height-size-h3: 28px !default;
 $line-height-size-h4: 24px !default;

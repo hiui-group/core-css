@@ -7,7 +7,7 @@
 @import '../../core/index';
 
 #{$entry-selector} {
-  // Reset all headings at entry root
+  // Only reset headings at entry root
   > {
     h1,
     h2,
