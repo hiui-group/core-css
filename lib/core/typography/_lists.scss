@@ -3,8 +3,7 @@
  * Date: 2018-08-16 00:00
  * Description: <ul>, <ol>, <dl> styles.
  */
-
-@import '../../core/index';
+@import '../index';
 
 @mixin typoLists {
   // Only add to lists at entry root
@@ -65,8 +64,4 @@
       }
     }
   }
-}
-
-#{$entry-selector} {
-  @include typoLists;
 }
