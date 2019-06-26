@@ -1,6 +1,6 @@
 {
   "name": "@hi-ui/core-css",
-  "version": "2.0.0-beta.6",
+  "version": "2.0.0-beta.7",
   "description": "HIUI core styles, include common reset, helper classes and typography. i18n supported.",
   "main": "index.scss",
   "directories": {
