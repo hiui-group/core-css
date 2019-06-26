@@ -6,7 +6,7 @@
 
 @import '../../core/index';
 
-#{$entry-selector} {
+@mixin typoImages {
   // Only add to imgs at entry root
   > {
     img,
@@ -24,4 +24,8 @@
       }
     }
   }
+}
+
+#{$entry-selector} {
+  @include typoImages;
 }

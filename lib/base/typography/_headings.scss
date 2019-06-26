@@ -6,7 +6,7 @@
 
 @import '../../core/index';
 
-#{$entry-selector} {
+@mixin typoHeadings {
   // Only reset headings at entry root
   > {
     h1,
@@ -50,4 +50,8 @@
       line-height: $line-height-size-h6;
     }
   }
+}
+
+#{$entry-selector} {
+  @include typoHeadings;
 }

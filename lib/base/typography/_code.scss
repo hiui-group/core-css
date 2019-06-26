@@ -6,7 +6,7 @@
 
 @import '../../core/index';
 
-#{$entry-selector} {
+@mixin typoCode {
   code,
   pre,
   kbd {
@@ -37,4 +37,8 @@
       box-shadow: none;
     }
   }
+}
+
+#{$entry-selector} {
+  @include typoCode;
 }

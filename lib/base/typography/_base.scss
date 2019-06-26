@@ -6,7 +6,7 @@
 
 @import '../../core/index';
 
-#{$entry-selector} {
+@mixin typoBase {
   @include clearfix();
 
   // Be careful about CSS selector specificity!
@@ -84,4 +84,8 @@
       }
     }
   }
+}
+
+#{$entry-selector} {
+  @include typoBase;
 }

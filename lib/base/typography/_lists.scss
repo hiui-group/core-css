@@ -6,7 +6,7 @@
 
 @import '../../core/index';
 
-#{$entry-selector} {
+@mixin typoLists {
   // Only add to lists at entry root
   > {
     ul,
@@ -65,4 +65,8 @@
       }
     }
   }
+}
+
+#{$entry-selector} {
+  @include typoLists;
 }
