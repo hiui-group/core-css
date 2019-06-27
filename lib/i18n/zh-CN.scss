@@ -17,14 +17,14 @@ $font-family-alt: $_chs-serif-font-stack, $_symbol-font-stack;
 
 #{$entry-selector}:lang(zh) {
   > {
-    // 标题中文不加粗
+    // 修改中文标题文字渲染
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-      font-weight: $font-weight-normal;
+      -webkit-font-smoothing: antialiased;
     }
 
     // 中文不使用斜体
