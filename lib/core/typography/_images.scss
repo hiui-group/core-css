@@ -4,9 +4,7 @@
  * Description: image styles.
  */
 
-@import '../../core/index';
-
-#{$entry-selector} {
+@mixin typoImages {
   // Only add to imgs at entry root
   > {
     img,

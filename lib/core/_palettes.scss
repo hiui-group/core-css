@@ -8,9 +8,10 @@
 $theme-colors: (
   'orange': #f63,
   'cyan': #46bc99,
+  'magenta': #ff5975,
+  'lavender': #b450de,
   'blue': #3da8f5,
-  'purple': #8a8acb,
-  'green': #1da653
+  'purple': #8a8acb
 ) !default;
 
 $palette-primary: map-merge(
@@ -20,8 +21,8 @@ $palette-primary: map-merge(
 
 $palette-secondary: (
   'success': #1da653,
-  'danger': #eb5252,
-  'warning': #e19d0c
+  'warning': #e19d0c,
+  'danger': #f44141
 ) !default;
 
 $palette-tertiary: (
@@ -31,6 +32,7 @@ $palette-tertiary: (
   'gray': #d8d8d8,
   'gray-light': #e7e7e7,
   'gray-lighter': #f6f6f6,
+  'blue-lighter': #ecf2fe,
   'white': #fff
 ) !default;
 
@@ -38,6 +40,8 @@ $palette-tertiary: (
 $palette-hiui: get-palette(get-color($palette-primary, 'hiui-blue')) !default;
 $palette-orange: get-palette(get-color($palette-primary, 'orange')) !default;
 $palette-cyan: get-palette(get-color($palette-primary, 'cyan')) !default;
+$palette-magenta: get-palette(get-color($palette-primary, 'magenta')) !default;
+$palette-lavender: get-palette(get-color($palette-primary, 'lavender')) !default;
 $palette-blue: get-palette(get-color($palette-primary, 'blue')) !default;
 $palette-purple: get-palette(get-color($palette-primary, 'purple')) !default;
 

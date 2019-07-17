@@ -4,9 +4,7 @@
  * Description: code preview styles.
  */
 
-@import '../../core/index';
-
-#{$entry-selector} {
+@mixin typoCode {
   code,
   pre,
   kbd {
