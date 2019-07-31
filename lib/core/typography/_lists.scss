@@ -20,16 +20,16 @@
       li {
         word-wrap: break-all;
 
-        > *:first-child {
+        > *:first-child:not(ul):not(ol) {
           margin-top: 0 !important;
         }
 
-        > *:last-child {
+        > *:last-child:not(ul):not(ol) {
           margin-bottom: 0 !important;
         }
 
         & + li {
-          margin-top: $spacer-3;
+          margin-top: $spacer-2;
         }
       }
     }
