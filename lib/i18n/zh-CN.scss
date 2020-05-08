@@ -5,30 +5,12 @@
  */
 /* stylelint-disable */
 
-@import '../core/index';
+@import '../variables';
+@import './zh-CN/font-web';
+@import './zh-CN/font-local';
 
 // 增加中文字体族
-$_chs-sans-font-stack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif !default;
-$_chs-serif-font-stack: Georgia, 'Times New Roman', Times, 'Songti SC', STSong, SimSun, serif !default;
-$_mono-font-stack: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
-
-$font-family-base: $_chs-sans-font-stack, $_symbol-font-stack;
-$font-family-alt: $_chs-serif-font-stack, $_symbol-font-stack;
-
-#{$entry-selector}:lang(zh) {
-  // 修改中文标题文字渲染
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    -webkit-font-smoothing: antialiased;
-  }
-
-  // 中文不使用斜体
-  dt,
-  em {
-    font-style: normal;
-  }
-}
+$font-family-sans: $_font-stack-sans, 'HiUI Sans', sans-serif, $_font-stack-symbol !default;
+$font-family-black: $_font-stack-sans, 'HiUI Black', sans-serif, $_font-stack-symbol !default;
+$font-family-serif: $_font-stack-serif, 'HiUI Serif', serif, $_font-stack-symbol !default;
+$font-family-mono: $_font-stack-mono, monospace, $_font-stack-symbol !default;

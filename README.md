@@ -6,15 +6,6 @@ HIUI core styles, include common reset, helper classes and typography. i18n supp
 
 ## Usage
 
-### Components
 For component usage, just use `@import '@hi-ui/core-css/index.scss';` imports variables and mix-ins.
-
-### Themes
-For theme usage, use code below to import variables, mix-ins, normalize, helper classes etc.
-
-``` scss
-@import '@hi-ui/core-css/i18n/zh-CN.scss';
-@import '@hi-ui/core-css/base.scss';
-```
 
 -- EOF --

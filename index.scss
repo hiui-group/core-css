@@ -1,7 +1,6 @@
-/**
- * Author: Sivan[sunxingfan@xiaomi.com]
- * Date: 2018-08-16 00:00
- * Description: import variables and mixins.
- */
+// Author: Sivan[sunxingfan@xiaomi.com]
+// Description: import variables and mixins.
 
-@import './lib/core/index';
+@import './lib/variables';
+@import './lib/mixins';
+@import './lib/typography';
