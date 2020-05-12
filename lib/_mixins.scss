@@ -1,37 +1,14 @@
 // Author: Sivan[sunxingfan@xiaomi.com]
 // Description: define mix-ins, functions etc.
 
-// Get color
-// $palette：palette name
-// $name：color name
-// $i：index(*)
-// color: get-color($palettePrimary, grayLight); => color: #eee;
-// color: get-color($paletteSecondary, purple, 2); => color: #773686;
-@function get-color($palette, $name, $i: 1) {
-  @return if(type-of(map-get($palette, $name)) == 'list', nth(map-get($palette, $name), $i), map-get($palette, $name));
+@import "common";
+
+@function use-color($color-name: '') {
+  @return var(--color#{if($color-name != '', '-' + $color-name, null)});
 }
 
-// Get Palette
-/// generate palette based on given color
-/// $color：base name
-@function get-palette($color) {
-  @return (
-    '10': mix(#fff, $color, 50%),
-    '20': mix(#fff, $color, 40%),
-    '30': mix(#fff, $color, 30%),
-    '40': mix(#fff, $color, 20%),
-    '50': $color,
-    '60': mix(#000, $color, 10%),
-    '70': mix(#000, $color, 20%),
-    '80': mix(#000, $color, 30%),
-    '90': mix(#000, $color, 40%),
-    'g50': mix(mix(#000, $color, 90%), #fff, 15%),
-    'g60': mix(mix(#000, $color, 90%), #fff, 20%),
-    'g70': mix(mix(#000, $color, 90%), #fff, 26%),
-    'g80': mix(mix(#000, $color, 90%), #fff, 35%),
-    'g90': mix(mix(#000, $color, 90%), #fff, 50%),
-    'g100': mix(mix(#000, $color, 90%), #fff, 80%)
-  );
+@function hex-to-hsl($color) {
+  @return hue($color), saturation($color), lightness($color);
 }
 
 // Clear float
@@ -54,18 +31,58 @@
   white-space: nowrap;
 }
 
+// Get CSS variables
+@mixin get-variable($color-palette: $palette-hiui) {
+  --color-primary: #{get-color($color-palette, '50')};
+  --color-primary-h: #{hue(get-color($color-palette, '50'))};
+  --color-primary-s: #{saturation(get-color($color-palette, '50'))};
+  --color-primary-l: #{lightness(get-color($color-palette, '50'))};
+  --color-primary-hsl : #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
+  --color-primary-10: #{get-color($color-palette, '10')};
+  --color-primary-20: #{get-color($color-palette, '20')};
+  --color-primary-30: #{get-color($color-palette, '30')};
+  --color-primary-40: #{get-color($color-palette, '40')};
+  --color-primary-60: #{get-color($color-palette, '60')};
+  --color-primary-70: #{get-color($color-palette, '70')};
+  --color-primary-80: #{get-color($color-palette, '80')};
+  --color-primary-90: #{get-color($color-palette, '90')};
+  --color-primary-g50: #{get-color($color-palette, 'g50')};
+  --color-primary-g60: #{get-color($color-palette, 'g60')};
+  --color-primary-g70: #{get-color($color-palette, 'g70')};
+  --color-primary-g80: #{get-color($color-palette, 'g80')};
+  --color-primary-g90: #{get-color($color-palette, 'g90')};
+  --color-primary-g100: #{get-color($color-palette, 'g100')};
+
+  --color-black: #{get-color($palette-tertiary, 'black')};
+  --color-gray-darker: #{get-color($palette-tertiary, 'gray-darker')};
+  --color-gray-dark: #{get-color($palette-tertiary, 'gray-dark')};
+  --color-gray: #{get-color($palette-tertiary, 'gray')};
+  --color-gray-light: #{get-color($palette-tertiary, 'gray-light')};
+  --color-gray-lighter: #{get-color($palette-tertiary, 'gray-lighter')};
+  --color-white: #{get-color($palette-tertiary, 'white')};
+}
+
 // Isolate component style
-@mixin isolation() {
+// block elements reset: margin, padding, text style, <ul>, <ol>
+// inline-block elements reset: margin, padding, text style
+// inline elements reset:
+@mixin isolation($display-outside: block, $display-inside: flow-root) {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
-  font: normal $font-weight-normal $font-size-normal/$line-height-normal $font-family-sans;
-  text-align: left;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0;
-  word-spacing: normal;
-  white-space: normal;
-  color: $black;
+
+  // equal to `display: inline`
+  @if ($display-outside != inline and $display-inside != flow) {
+    font: normal $font-weight-normal #{$font-size-normal}/#{$line-height-size-normal} $font-family-sans;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: 0;
+    word-spacing: normal;
+    white-space: normal;
+    color: use-color(black);
+  }
 }

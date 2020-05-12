@@ -1,0 +1,76 @@
+// Author: Sivan[sunxingfan@xiaomi.com]
+// Description: define common functions, colors etc.
+
+// Get color
+// $palette：palette name
+// $name：color name
+// $i：index(*)
+// color: get-color($palettePrimary, grayLight); => color: #eee;
+// color: get-color($paletteSecondary, purple, 2); => color: #773686;
+@function get-color($palette, $name, $i: 1) {
+  @return if(type-of(map-get($palette, $name)) == 'list', nth(map-get($palette, $name), $i), map-get($palette, $name));
+}
+
+// Get Palette
+/// generate palette based on given color
+/// $color：base name
+@function get-palette($color) {
+  @return (
+    '10': mix(#fff, $color, 50%),
+    '20': mix(#fff, $color, 40%),
+    '30': mix(#fff, $color, 30%),
+    '40': mix(#fff, $color, 20%),
+    '50': $color,
+    '60': mix(#000, $color, 10%),
+    '70': mix(#000, $color, 20%),
+    '80': mix(#000, $color, 30%),
+    '90': mix(#000, $color, 40%),
+    'g50': mix(mix(#000, $color, 90%), #fff, 15%),
+    'g60': mix(mix(#000, $color, 90%), #fff, 20%),
+    'g70': mix(mix(#000, $color, 90%), #fff, 26%),
+    'g80': mix(mix(#000, $color, 90%), #fff, 35%),
+    'g90': mix(mix(#000, $color, 90%), #fff, 50%),
+    'g100': mix(mix(#000, $color, 90%), #fff, 80%)
+  );
+}
+
+// Colors
+$theme-colors: (
+  'orange': #f63,
+  'cyan': #46bc99,
+  'magenta': #ff5975,
+  'lavender': #b450de,
+  'blue': #3da8f5,
+  'purple': #8a8acb
+) !default;
+
+$palette-primary: map-merge(
+    ('hiui-blue': #4285f4),
+    $theme-colors
+) !default;
+
+$palette-secondary: (
+  'success': hsl(144, 70%, 38%),
+  'warning': #e19d0c,
+  'danger': #f44141
+) !default;
+
+$palette-tertiary: (
+  'black': #333,
+  'gray-darker': #666,
+  'gray-dark': #ccc,
+  'gray': #d8d8d8,
+  'gray-light': #e7e7e7,
+  'gray-lighter': #f6f6f6,
+  'blue-lighter': #ecf2fe,
+  'white': #fff
+) !default;
+
+/// Color palettes
+$palette-hiui: get-palette(get-color($palette-primary, 'hiui-blue')) !default;
+$palette-orange: get-palette(get-color($palette-primary, 'orange')) !default;
+$palette-cyan: get-palette(get-color($palette-primary, 'cyan')) !default;
+$palette-magenta: get-palette(get-color($palette-primary, 'magenta')) !default;
+$palette-lavender: get-palette(get-color($palette-primary, 'lavender')) !default;
+$palette-blue: get-palette(get-color($palette-primary, 'blue')) !default;
+$palette-purple: get-palette(get-color($palette-primary, 'purple')) !default;
