@@ -45,8 +45,8 @@ $theme-colors: (
 ) !default;
 
 $palette-primary: map-merge(
-    ('hiui-blue': #4285f4),
-    $theme-colors
+  ('hiui-blue': #4285f4),
+  $theme-colors
 ) !default;
 
 $palette-secondary: (

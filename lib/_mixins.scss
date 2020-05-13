@@ -1,7 +1,7 @@
 // Author: Sivan[sunxingfan@xiaomi.com]
 // Description: define mix-ins, functions etc.
 
-@import "common";
+@import 'common';
 
 @function use-color($color-name: '') {
   @return var(--color#{if($color-name != '', '-' + $color-name, null)});
@@ -37,7 +37,7 @@
   --color-primary-h: #{hue(get-color($color-palette, '50'))};
   --color-primary-s: #{saturation(get-color($color-palette, '50'))};
   --color-primary-l: #{lightness(get-color($color-palette, '50'))};
-  --color-primary-hsl : #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
+  --color-primary-hsl: #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
   --color-primary-10: #{get-color($color-palette, '10')};
   --color-primary-20: #{get-color($color-palette, '20')};
   --color-primary-30: #{get-color($color-palette, '30')};
@@ -52,7 +52,6 @@
   --color-primary-g80: #{get-color($color-palette, 'g80')};
   --color-primary-g90: #{get-color($color-palette, 'g90')};
   --color-primary-g100: #{get-color($color-palette, 'g100')};
-
   --color-black: #{get-color($palette-tertiary, 'black')};
   --color-gray-darker: #{get-color($palette-tertiary, 'gray-darker')};
   --color-gray-dark: #{get-color($palette-tertiary, 'gray-dark')};

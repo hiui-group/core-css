@@ -1,7 +1,7 @@
 // Author: Sivan[sunxingfan@xiaomi.com]
 // Description: define variables, alias etc.
 
-@import "common";
+@import 'common';
 
 // Fonts
 /// Font Stack
@@ -95,10 +95,3 @@ $speed-fast: 0.15s !default;
 $speed-normal: 0.3s !default;
 $speed-slow: 0.5s !default;
 $easing: ease-in !default;
-
-$blackColor: #ffffff !default;
-
-@mixin getBlack($colorPalette: $palette-hiui) {
-  --primary-color: #{get-color($colorPalette, '50')};
-  //--primary-color: $black;
-}
