@@ -32,7 +32,8 @@
 }
 
 // Get CSS variables
-@mixin get-variables($color: get-color($palette-primary, 'hiui-blue')) {
+// generate css variables snippet by given color
+@mixin get-vars($color: get-color($palette-primary, 'hiui-blue')) {
   --color-primary: #{$color};  // base color
   --color-primary-h: #{hue($color)};
   --color-primary-s: #{saturation($color)};
@@ -46,12 +47,12 @@
   --color-primary-70: #{mix(#000, $color, 20%)};
   --color-primary-80: #{mix(#000, $color, 30%)};
   --color-primary-90: #{mix(#000, $color, 40%)};
-  --color-primary-g50: #{mix(mix(#000, $color, 90%), #fff, 15%)};
-  --color-primary-g60: #{mix(mix(#000, $color, 90%), #fff, 20%)};
-  --color-primary-g70: #{mix(mix(#000, $color, 90%), #fff, 26%)};
-  --color-primary-g80: #{mix(mix(#000, $color, 90%), #fff, 35%)};
-  --color-primary-g90: #{mix(mix(#000, $color, 90%), #fff, 50%)};
-  --color-primary-g100: #{mix(mix(#000, $color, 90%), #fff, 80%)};
+  //--color-primary-g50: #{mix(mix(#000, $color, 90%), #fff, 15%)};
+  //--color-primary-g60: #{mix(mix(#000, $color, 90%), #fff, 20%)};
+  //--color-primary-g70: #{mix(mix(#000, $color, 90%), #fff, 26%)};
+  //--color-primary-g80: #{mix(mix(#000, $color, 90%), #fff, 35%)};
+  //--color-primary-g90: #{mix(mix(#000, $color, 90%), #fff, 50%)};
+  //--color-primary-g100: #{mix(mix(#000, $color, 90%), #fff, 80%)};
   --color-black: #{get-color($palette-tertiary, 'black')}; // text
   --color-gray-darker: #{get-color($palette-tertiary, 'gray-darker')};
   --color-gray-dark: #{get-color($palette-tertiary, 'gray-dark')}; // border color
@@ -61,18 +62,64 @@
   --color-white: #{get-color($palette-tertiary, 'white')}; // white
 }
 
+// Use CSS variable
+// Usage:
+// :root {
+//   --color-brand: #ff6700;
+// }
+// .modern {
+//   @include use-var(background-color, color-brand);
+// }
+//
+// .modern-with-fallback {
+//   @include use-var(background-color, color-brand, #000);
+// }
+// .legacy {
+//   @include use-var(background-color, color-brand, #000, true);
+// }
+// .legacy-with-test {
+//   @include use-var(background-color, color-brand, #000, '.no-custom-properties');
+// }
+@mixin use-var($property, $value, $fallback: false, $compatible-mode: false) {
+  // if fallback value given
+  @if $fallback {
+    // if need compatible selector
+    @if $compatible-mode {
+      @if type-of($compatible-mode) == string {
+        #{$property}: var(--#{$value}, #{$fallback});
+
+        #{$compatible-mode} & {
+          #{$property}: $fallback;
+        }
+      } @else {
+        #{$property}: $fallback;
+        #{$property}: var(--#{$value}, #{$fallback});
+      }
+    } @else {
+      #{$property}: var(--#{$value}, #{$fallback});
+    }
+  } @else {
+    #{$property}: var(--#{$value});
+  }
+}
+
 // Isolate component style
 // block elements reset: margin, padding, text style, <ul>, <ol>
 // inline-block elements reset: margin, padding, text style
-// inline elements reset:
-@mixin isolation($display-outside: block, $display-inside: flow-root) {
+// inline elements reset: TBD.
+// Usage:
+// .hi-btn {
+//   @include isolation('inline');
+//   ...
+// }
+@mixin isolation($display-outside: 'block', $display-inside: 'flow-root') {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
 
   // equal to `display: inline`
-  @if ($display-outside != inline and $display-inside != flow) {
+  @if not ($display-outside == 'inline' and $display-inside == 'flow') {
     font: normal $font-weight-normal #{$font-size-normal}/#{$line-height-size-normal} $font-family-sans;
     text-align: left;
     text-decoration: none;
