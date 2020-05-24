@@ -46,7 +46,7 @@
   --color-primary-h: #{hue($color)};
   --color-primary-s: #{saturation($color)};
   --color-primary-l: #{lightness($color)};
-  --color-primary-hsl: #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
+  //--color-primary-hsl: #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
   --color-primary-10: #{mix(#fff, $color, 50%)};
   --color-primary-20: #{mix(#fff, $color, 40%)};
   --color-primary-30: #{mix(#fff, $color, 30%)};
@@ -99,14 +99,20 @@
         #{$compatible-mode} & {
           #{$property}: $fallback;
         }
-      } @else {
+      }
+
+      @else {
         #{$property}: $fallback;
         #{$property}: var(--#{$value}, #{$fallback});
       }
-    } @else {
+    }
+
+    @else {
       #{$property}: var(--#{$value}, #{$fallback});
     }
-  } @else {
+  }
+
+  @else {
     #{$property}: var(--#{$value});
   }
 }

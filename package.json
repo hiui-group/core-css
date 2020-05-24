@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "node_modules/.bin/stylelint --config package.json 'lib/**/*.scss'"
+    "test": "node_modules/.bin/stylelint --config package.json 'lib/**/*.scss'",
+    "fix": "node_modules/.bin/stylelint --config package.json 'lib/**/*.scss' --fix"
   },
   "repository": {
     "type": "git",
