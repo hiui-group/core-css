@@ -37,6 +37,8 @@
       "stylelint-config-recommended-scss"
     ],
     "rules": {
+      "at-rule-empty-line-before": null,
+      "block-closing-brace-newline-after": null,
       "max-nesting-depth": null,
       "string-quotes": "single",
       "property-no-vendor-prefix": true,

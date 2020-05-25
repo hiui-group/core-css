@@ -71,6 +71,7 @@
 }
 
 // Use CSS variable
+// @Todo: switch to postcss
 // Usage:
 // :root {
 //   --color-brand: #ff6700;
@@ -99,20 +100,14 @@
         #{$compatible-mode} & {
           #{$property}: $fallback;
         }
-      }
-
-      @else {
+      } @else {
         #{$property}: $fallback;
         #{$property}: var(--#{$value}, #{$fallback});
       }
-    }
-
-    @else {
+    } @else {
       #{$property}: var(--#{$value}, #{$fallback});
     }
-  }
-
-  @else {
+  } @else {
     #{$property}: var(--#{$value});
   }
 }
@@ -123,10 +118,10 @@
 // inline elements reset: TBD.
 // Usage:
 // .hi-btn {
-//   @include isolation('inline');
+//   @include isolation('inline', 'flow-root');
 //   ...
 // }
-@mixin isolation($display-outside: 'block', $display-inside: 'flow-root') {
+@mixin isolation($display-outside: 'block', $display-inside: 'flow-root', $is-root: true) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
