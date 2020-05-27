@@ -26,23 +26,30 @@
   "license": "MIT",
   "devDependencies": {
     "stylelint": "^13.3.3",
-    "stylelint-config-recommended-scss": "^4.2.0",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.17.2"
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^19.0.0"
   },
   "dependencies": {},
   "stylelint": {
     "extends": [
       "stylelint-config-standard",
-      "stylelint-config-recommended-scss"
+      "stylelint-config-sass-guidelines"
     ],
     "rules": {
-      "at-rule-empty-line-before": null,
-      "block-closing-brace-newline-after": null,
       "max-nesting-depth": null,
-      "string-quotes": "single",
+      "at-rule-empty-line-before": null,
+      "block-closing-brace-newline-after": [
+        "always",
+        {
+          "ignoreAtRules": [
+            "if",
+            "else"
+          ]
+        }
+      ],
       "property-no-vendor-prefix": true,
-      "value-no-vendor-prefix": true
+      "value-no-vendor-prefix": true,
+      "order/properties-alphabetical-order": null
     }
   }
 }

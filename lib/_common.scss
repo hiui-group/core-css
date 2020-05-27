@@ -21,10 +21,7 @@ $theme-colors: (
   'purple': #8a8acb
 ) !default;
 
-$palette-primary: map-merge(
-  ('hiui-blue': #4285f4),
-  $theme-colors
-) !default;
+$palette-primary: map-merge(('hiui-blue': #4285f4), $theme-colors) !default;
 
 $palette-secondary: (
   'success': hsl(144, 70%, 38%),
