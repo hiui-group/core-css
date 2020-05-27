@@ -1,6 +1,6 @@
 # 更新日志
 
-`HIUI Core CSS` 遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
+`HiUI Core CSS` 遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
 
 > 版本格式：主版本号.次版本号.修订号，版本号递增规则如下：
 > 1. 主版本号：当你做了不兼容的 API 修改，
@@ -10,7 +10,9 @@
 
 ## 3.0.0
 
+- 使用 CSS Variables 替代 SCSS 变量；
 - 去除 `base.scss` 及相关预设，引用项目纯净无注入；
+- 遵循 sass-guidelin.es 规范；
 - 提供小米兰亭Pro作为中文在线字体。
 
 ## 2.0.1

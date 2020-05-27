@@ -1,41 +1,73 @@
 // Author: Sivan[sunxingfan@xiaomi.com]
 // Description: define common functions, colors etc.
 
-// Get color
-// $palette：palette name
-// $name：color name
-// $i：index(*)
-// color: get-color($palettePrimary, grayLight); => color: #eee;
-// color: get-color($paletteSecondary, purple, 2); => color: #773686;
+/// Slightly lighten a color
+/// @access private
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function _tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access private
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function _shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/// Get color from palette
+/// @access public
+/// @param {Map} $palette - palette name
+/// @param {String} $name - color name from this palette
+/// @param {Number} $i - index
+/// @return {Color}
+/// @example
+/// color: get-color($palettePrimary, grayLight);
+/// // color: #eee;
+/// color: get-color($paletteSecondary, purple, 2);
+/// // color: #773686;
 @function get-color($palette, $name, $i: 1) {
   @return if(type-of(map-get($palette, $name)) == 'list', nth(map-get($palette, $name), $i), map-get($palette, $name));
 }
 
-// Colors
-$theme-colors: (
-  'orange': #f63,
-  'cyan': #46bc99,
-  'magenta': #ff5975,
-  'lavender': #b450de,
-  'blue': #3da8f5,
-  'purple': #8a8acb
+/// Main theme colors for different palettes
+/// @type Map
+$THEME_COLORS: (
+  'orange': hsl(15, 100%, 60%),
+  'cyan': hsl(162, 47%, 51%),
+  'magenta': hsl(350, 100%, 67%),
+  'lavender': hsl(282, 68%, 59%),
+  'blue': hsl(205, 90%, 60%),
+  'purple': hsl(240, 38%, 67%),
+  'ocher': hsl(28, 35%, 38%)
 ) !default;
 
-$palette-primary: map-merge(('hiui-blue': #4285f4), $theme-colors) !default;
+/// Main theme colors extend hiui-blue
+/// @type Map
+$PALETTE_PRIMARY: map-merge(('hiui-blue': #4285f4), $THEME_COLORS) !default;
 
-$palette-secondary: (
+/// Palette for status colors
+/// @type Map
+$PALETTE_SECONDARY: (
   'success': hsl(144, 70%, 38%),
-  'warning': #e19d0c,
-  'danger': #f44141
+  'warning': hsl(40, 100%, 55%),
+  'danger': hsl(0, 89%, 61%)
 ) !default;
 
-$palette-tertiary: (
-  'black': #333,
+/// Palette for grayscale colors
+/// @type Map
+/// @todo should update
+$PALETTE_TERTIARY: (
+  'black': hsl(0, 0%, 20%),
   'gray-darker': #666,
   'gray-dark': #ccc,
   'gray': #d8d8d8,
   'gray-light': #e7e7e7,
   'gray-lighter': #f6f6f6,
-  'blue-lighter': #ecf2fe,
-  'white': #fff
+  'blue-lighter': hsl(220, 90%, 96%), /// @deperated
+  'white': hsl(0, 0%, 100%)
 ) !default;
