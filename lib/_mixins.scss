@@ -42,12 +42,12 @@
 
 // Get CSS variables
 // generate css variables snippet by given color
-@mixin get-vars($color: get-color($PALETTE_PRIMARY, 'hiui-blue')) {
+@mixin get-vars($color: get-color($palette_primary, 'hiui-blue')) {
   --color-primary: #{$color};  // primary color
   --color-primary-h: #{hue($color)};
   --color-primary-s: #{saturation($color)};
   --color-primary-l: #{lightness($color)};
-  --color-primary-bg: #{_tint($color, 90%)};  // hover color
+  --color-primary-bg: #{tint($color, 90%)};  // hover color
   //--color-primary-hsl: #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
   --color-primary-10: #{mix(#fff, $color, 50%)};
   --color-primary-20: #{mix(#fff, $color, 40%)};
@@ -63,13 +63,13 @@
   //--color-primary-g80: #{mix(mix(#000, $color, 90%), #fff, 35%)};
   //--color-primary-g90: #{mix(mix(#000, $color, 90%), #fff, 50%)};
   //--color-primary-g100: #{mix(mix(#000, $color, 90%), #fff, 80%)};
-  --color-black: #{get-color($PALETTE_TERTIARY, 'black')}; // text
-  --color-gray-darker: #{get-color($PALETTE_TERTIARY, 'gray-darker')};
-  --color-gray-dark: #{get-color($PALETTE_TERTIARY, 'gray-dark')}; // border color
-  --color-gray: #{get-color($PALETTE_TERTIARY, 'gray')};
-  --color-gray-light: #{get-color($PALETTE_TERTIARY, 'gray-light')};
-  --color-gray-lighter: #{get-color($PALETTE_TERTIARY, 'gray-lighter')};
-  --color-white: #{get-color($PALETTE_TERTIARY, 'white')}; // white
+  --color-black: #{get-color($palette-tertiary, 'black')}; // text
+  --color-gray-darker: #{get-color($palette-tertiary, 'gray-darker')};
+  --color-gray-dark: #{get-color($palette-tertiary, 'gray-dark')}; // border color
+  --color-gray: #{get-color($palette-tertiary, 'gray')};
+  --color-gray-light: #{get-color($palette-tertiary, 'gray-light')};
+  --color-gray-lighter: #{get-color($palette-tertiary, 'gray-lighter')};
+  --color-white: #{get-color($palette-tertiary, 'white')}; // white
 }
 
 // Use CSS variable

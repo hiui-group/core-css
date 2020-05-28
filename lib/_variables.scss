@@ -85,13 +85,13 @@ $spacer-10: nth($_spacers, 10) !default; // 40px
 
 // Colors
 /// Color shortcuts
-$black: get-color($PALETTE_TERTIARY, 'black') !default;
-$gray-darker: get-color($PALETTE_TERTIARY, 'gray-darker') !default;
-$gray-dark: get-color($PALETTE_TERTIARY, 'gray-dark') !default;
-$gray: get-color($PALETTE_TERTIARY, 'gray') !default;
-$gray-light: get-color($PALETTE_TERTIARY, 'gray-light') !default;
-$gray-lighter: get-color($PALETTE_TERTIARY, 'gray-lighter') !default;
-$white: get-color($PALETTE_TERTIARY, 'white') !default;
+$black: get-color($palette-tertiary, 'black') !default;
+$gray-darker: get-color($palette-tertiary, 'gray-darker') !default;
+$gray-dark: get-color($palette-tertiary, 'gray-dark') !default;
+$gray: get-color($palette-tertiary, 'gray') !default;
+$gray-light: get-color($palette-tertiary, 'gray-light') !default;
+$gray-lighter: get-color($palette-tertiary, 'gray-lighter') !default;
+$white: get-color($palette-tertiary, 'white') !default;
 
 // Animation
 $speed-fast: 0.15s !default;

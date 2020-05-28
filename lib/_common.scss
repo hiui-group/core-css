@@ -6,7 +6,7 @@
 /// @param {Color} $color - color to tint
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
-@function _tint($color, $percentage) {
+@function tint($color, $percentage) {
   @return mix(white, $color, $percentage);
 }
 
@@ -15,7 +15,7 @@
 /// @param {Color} $color - color to shade
 /// @param {Number} $percentage - percentage of `$color` in returned color
 /// @return {Color}
-@function _shade($color, $percentage) {
+@function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
 
@@ -36,7 +36,7 @@
 
 /// Main theme colors for different palettes
 /// @type Map
-$THEME_COLORS: (
+$_theme-colors: (
   'orange': hsl(15, 100%, 60%),
   'cyan': hsl(162, 47%, 51%),
   'magenta': hsl(350, 100%, 67%),
@@ -48,11 +48,11 @@ $THEME_COLORS: (
 
 /// Main theme colors extend hiui-blue
 /// @type Map
-$PALETTE_PRIMARY: map-merge(('hiui-blue': #4285f4), $THEME_COLORS) !default;
+$palette-primary: map-merge(('hiui-blue': #4285f4), $_theme-colors) !default;
 
 /// Palette for status colors
 /// @type Map
-$PALETTE_SECONDARY: (
+$palette-secondary: (
   'success': hsl(144, 70%, 38%),
   'warning': hsl(40, 100%, 55%),
   'danger': hsl(0, 89%, 61%)
@@ -61,7 +61,7 @@ $PALETTE_SECONDARY: (
 /// Palette for grayscale colors
 /// @type Map
 /// @todo should update
-$PALETTE_TERTIARY: (
+$palette-tertiary: (
   'black': hsl(0, 0%, 20%),
   'gray-darker': #666,
   'gray-dark': #ccc,
