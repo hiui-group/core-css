@@ -48,7 +48,7 @@ $_theme-colors: (
 
 /// Main theme colors extend hiui-blue
 /// @type Map
-$palette-primary: map-merge(('hiui-blue': #4285f4), $_theme-colors) !default;
+$palette-primary: map-merge(('hiui-blue': hsl(217, 89%, 61%)), $_theme-colors) !default;
 
 /// Palette for status colors
 /// @type Map
@@ -63,11 +63,12 @@ $palette-secondary: (
 /// @todo should update
 $palette-tertiary: (
   'black': hsl(0, 0%, 20%),
-  'gray-darker': #666,
-  'gray-dark': #ccc,
-  'gray': #d8d8d8,
-  'gray-light': #e7e7e7,
-  'gray-lighter': #f6f6f6,
+  'gray-80': hsl(0, 0%, 40%),
+  'gray-70': hsl(0, 0%, 60%),
+  'gray-50': hsl(0, 0%, 80%),
+  'gray-30': hsl(0, 0%, 85%),
+  'gray-20': hsl(0, 0%, 91%),
+  'gray-10': hsl(0, 0%, 98%),
+  'white': hsl(0, 0%, 100%),
   'blue-lighter': hsl(220, 90%, 96%), /// @deperated
-  'white': hsl(0, 0%, 100%)
 ) !default;

@@ -52,28 +52,32 @@
   --color-primary-h: #{hue($color)};
   --color-primary-s: #{saturation($color)};
   --color-primary-l: #{lightness($color)};
-  --color-primary-bg: #{tint($color, 90%)};  // hover color
   //--color-primary-hsl: #{var(--color-primary-h), var(--color-primary-s), var(--color-primary-l)};
-  --color-primary-10: #{tint($color, 50%)};
-  --color-primary-20: #{tint($color, 40%)};
-  --color-primary-30: #{tint($color, 30%)};
-  --color-primary-40: #{tint($color, 20%)}; // base color hover
+  --color-primary-10: #{tint($color, 96%)};
+  --color-primary-20: #{tint($color, 92%)}; // background hover color
+  --color-primary-30: #{tint($color, 76%)};
+  --color-primary-40: #{tint($color, 60%)};
+  --color-primary-50: #{tint($color, 30%)}; // base color hover
   --color-primary-60: #{shade($color, 10%)}; // base color active
-  --color-primary-70: #{shade($color, 20%)};
-  --color-primary-80: #{shade($color, 30%)};
-  --color-primary-90: #{shade($color, 40%)};
-  //--color-primary-g50: #{mix(mix(#000, $color, 90%), #fff, 15%)};
-  //--color-primary-g60: #{mix(mix(#000, $color, 90%), #fff, 20%)};
-  //--color-primary-g70: #{mix(mix(#000, $color, 90%), #fff, 26%)};
-  //--color-primary-g80: #{mix(mix(#000, $color, 90%), #fff, 35%)};
-  //--color-primary-g90: #{mix(mix(#000, $color, 90%), #fff, 50%)};
-  //--color-primary-g100: #{mix(mix(#000, $color, 90%), #fff, 80%)};
-  --color-black: #{get-color($palette-tertiary, 'black')}; // text
-  --color-gray-darker: #{get-color($palette-tertiary, 'gray-darker')};
-  --color-gray-dark: #{get-color($palette-tertiary, 'gray-dark')}; // border color
-  --color-gray: #{get-color($palette-tertiary, 'gray')};
-  --color-gray-light: #{get-color($palette-tertiary, 'gray-light')};
-  --color-gray-lighter: #{get-color($palette-tertiary, 'gray-lighter')};
+  --color-primary-70: #{shade($color, 30%)};
+  --color-primary-80: #{shade($color, 40%)};
+  --color-primary-90: #{shade($color, 50%)};
+  --color-success: #{get-color($palette-secondary, 'success')};
+  --color-success-20: #{tint(get-color($palette-secondary, 'success'), 92%)}; // background color
+  --color-success-40: #{tint(get-color($palette-secondary, 'success'), 60%)}; // border color
+  --color-warning: #{get-color($palette-secondary, 'warning')};
+  --color-warning-20: #{tint(get-color($palette-secondary, 'warning'), 92%)};
+  --color-warning-40: #{tint(get-color($palette-secondary, 'warning'), 60%)};
+  --color-danger: #{get-color($palette-secondary, 'danger')};
+  --color-danger-20: #{tint(get-color($palette-secondary, 'danger'), 92%)};
+  --color-danger-40: #{tint(get-color($palette-secondary, 'danger'), 60%)};
+  --color-black: #{get-color($palette-tertiary, 'black')}; // title
+  --color-gray-80: #{get-color($palette-tertiary, 'gray-80')}; // text
+  --color-gray-70: #{get-color($palette-tertiary, 'gray-70')}; // text alter
+  --color-gray-50: #{get-color($palette-tertiary, 'gray-50')}; // text disabled
+  --color-gray-30: #{get-color($palette-tertiary, 'gray-30')}; // border
+  --color-gray-20: #{get-color($palette-tertiary, 'gray-20')}; // line
+  --color-gray-10: #{get-color($palette-tertiary, 'gray-10')}; // background alter
   --color-white: #{get-color($palette-tertiary, 'white')}; // white
 }
 
