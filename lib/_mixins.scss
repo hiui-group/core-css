@@ -64,13 +64,22 @@
   --color-primary-90: #{shade($color, 50%)};
   --color-success: #{get-color($palette-secondary, 'success')};
   --color-success-20: #{tint(get-color($palette-secondary, 'success'), 92%)}; // background color
+  --color-success-30: #{tint(get-color($palette-secondary, 'success'), 76%)}; // box-shadow color
   --color-success-40: #{tint(get-color($palette-secondary, 'success'), 60%)}; // border color
+  --color-success-50: #{tint(get-color($palette-secondary, 'success'), 30%)}; // hover color
+  --color-success-60: #{shade(get-color($palette-secondary, 'success'), 10%)}; // active color
   --color-warning: #{get-color($palette-secondary, 'warning')};
   --color-warning-20: #{tint(get-color($palette-secondary, 'warning'), 92%)};
+  --color-warning-30: #{tint(get-color($palette-secondary, 'warning'), 76%)};
   --color-warning-40: #{tint(get-color($palette-secondary, 'warning'), 60%)};
+  --color-warning-50: #{tint(get-color($palette-secondary, 'warning'), 30%)};
+  --color-warning-60: #{shade(get-color($palette-secondary, 'warning'), 10%)};
   --color-danger: #{get-color($palette-secondary, 'danger')};
   --color-danger-20: #{tint(get-color($palette-secondary, 'danger'), 92%)};
+  --color-danger-30: #{tint(get-color($palette-secondary, 'danger'), 76%)};
   --color-danger-40: #{tint(get-color($palette-secondary, 'danger'), 60%)};
+  --color-danger-50: #{tint(get-color($palette-secondary, 'danger'), 30%)};
+  --color-danger-60: #{shade(get-color($palette-secondary, 'danger'), 10%)};
   --color-black: #{get-color($palette-tertiary, 'black')}; // title
   --color-gray-80: #{get-color($palette-tertiary, 'gray-80')}; // text
   --color-gray-70: #{get-color($palette-tertiary, 'gray-70')}; // text alter
